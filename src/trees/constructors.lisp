@@ -17,8 +17,8 @@
 
 (in-package :funds)
 
-(defconstant +bt-leaf+ (make-instance 'bt-leaf))
-(defconstant +avl-leaf+ (make-instance 'avl-leaf))
+(defparameter +bt-leaf+ (make-instance 'bt-leaf))
+(defparameter +avl-leaf+ (make-instance 'avl-leaf))
 
 (defun make-bt-leaf ()
   +bt-leaf+)
