@@ -1,0 +1,28 @@
+
+INSTALLING FUNDS
+
+The latest version of funds is available at 
+http://common-lisp.net/project/funds.
+
+Funds is designed to be loaded with asdf, available from
+http://cclan.cvs.sourceforge.net/*checkout*/cclan/asdf/asdf.lisp.
+Make a symbolic link to the file funds/src/funds.asd somewhere visible
+to asdf.  On linux, the command would be:
+
+    prompt $ cd /somewhere/in/*central-registry*
+    prompt $ ln -s /path/to/funds/src/funds.asd .
+
+LOADING FUNDS
+
+To load the system, type at a lisp prompt:
+
+    > (asdf:operate 'asdf:load-op 'funds)
+
+To see the publicly exported symbols in package "FUNDS," look at the
+file funds/src/package.lisp.  
+
+SEEING THE EXAMPLES
+
+Make a symbolic link to the file funds/examples/funds-examples.asd visible
+to asdf.  Type (asdf:operate 'asdf:load-op 'funds-examples).  Now try
+(solve p1) to see a functional sudoku solver at work.
